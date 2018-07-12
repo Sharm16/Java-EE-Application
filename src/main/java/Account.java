@@ -23,44 +23,37 @@ public class Account {
 //	@OneToMany(fetch = FetchType.LAZY, mappedBy = "company")
 //	private List<Transaction> transactions;
 	
-	
-	public Account(String firstName, String lastName, int accountNumber) {
+	public Account(long accountId, String firstName, String lastName, int accountNumber) {
+
+		this.accountId = accountId;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.accountNumber = accountNumber;
 	}
-
-
+	public long getAccountId() {
+		return accountId;
+	}
+	public void setAccountId(long accountId) {
+		this.accountId = accountId;
+	}
 	public String getFirstName() {
 		return firstName;
 	}
-
-
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
-
-
 	public String getLastName() {
 		return lastName;
 	}
-
-
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-
-
 	public int getAccountNumber() {
 		return accountNumber;
 	}
-
-
 	public void setAccountNumber(int accountNumber) {
 		this.accountNumber = accountNumber;
 	}
-
-	
 	
 	
 }
